@@ -15,7 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include=".resources\images - icons\" />
+    <Resource Include=".resources\fonts\Jost-Regular.ttf" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Resource Include=".resources\icons\chronicle_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include=".resources\fonts\Font Awesome 6 Free-Regular-400.otf" />
+    <Resource Include=".resources\fonts\Font Awesome 6 Free-Solid-900.otf" />
   </ItemGroup>
 
   <ItemGroup>

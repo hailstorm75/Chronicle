@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:Chronicle"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Order is important -->
+                <ResourceDictionary Source="styles\Fonts.xaml" />
+                <ResourceDictionary Source="styles\Colors.xaml" />
+                <ResourceDictionary Source="styles\Buttons.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chronicle"
         mc:Ignorable="d"
-        Height="450" Width="800">
-    <Grid>
+        
+        Height="650" Width="1032"
+        Icon=".resources\icons\chronicle_icon.ico">
+    
+    <Grid Background="{StaticResource LightDarkBrush}">
 
+        <Grid.ColumnDefinitions>
+            <!-- Side menu -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Main window -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Side menu --> <!-- make the border width resizable -->
+        <Border Grid.Column="0" BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
+                Background="{StaticResource DarkBrush}" Width="270">
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <!-- App title -->
+                    <RowDefinition Height="100" />
+                    <!-- Menu -->
+                    <RowDefinition Height="Auto" />
+                    <!-- blank space -->
+                    <RowDefinition Height="*" />
+                    <!-- Other menu -->
+                    <RowDefinition Height="Auto" />
+                    <!-- blank space -->
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- App title -->
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                               Foreground="{StaticResource WhiteBrush}" Margin="-20, 5, 5, 5">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="25" Color="{StaticResource Blue}" ShadowDepth="0" />
+                        </TextBlock.Effect>
+                        <Run Text="{StaticResource PlaneIcon}" FontFamily="{StaticResource FontAwesomeSolid}" FontSize="{StaticResource Large}" />
+                        <Run Text=" Chronicle" FontFamily="{StaticResource JostFont}" FontSize="{StaticResource XLarge}" />
+                    </TextBlock>
+                </Grid>
+
+                <!-- Menu -->
+                <StackPanel Grid.Row="1" Orientation="Vertical" >
+                    <local:MenuItemControl  />
+                    <local:MenuItemControl  />
+                    <local:MenuItemControl  />
+                    <local:MenuItemControl  />
+                </StackPanel>
+
+                <!-- blank space -->
+                <Border Grid.Row="2" />
+
+                <!-- Other Menu -->
+                <StackPanel Grid.Row="3" Orientation="Vertical" >
+                    <local:MenuItemControl  />
+                    <local:MenuItemControl  />
+                </StackPanel>
+
+                <!-- blank space -->
+                <Border Grid.Row="4" Height="30" />
+
+            </Grid>
+        </Border>
     </Grid>
 </Window>
