@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:Chronicle"
         mc:Ignorable="d"
         
-        Height="650" Width="1032"
-        Icon=".resources\icons\chronicle_icon.ico">
-    
+        Height="800" Width="1082"
+        MinHeight="{Binding MinimumHeight}"
+        MinWidth="{Binding MinimumWidth}"
+        Icon=".resources/icons/chronicle_icon.ico">
+
     <Grid Background="{StaticResource LightDarkBrush}">
 
         <Grid.ColumnDefinitions>
@@ -18,11 +20,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- Side menu --> <!-- make the border width resizable -->
-        <Border Grid.Column="0" BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
-                Background="{StaticResource DarkBrush}" Width="270">
+        <!-- Side menu -->
+        <!-- make the border width resizable -->
+        <Border Grid.Column="0" x:Name="Menu" 
+                BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
+                Background="{StaticResource DarkBrush}" >
+
             <Grid>
-                
+
                 <Grid.RowDefinitions>
                     <!-- App title -->
                     <RowDefinition Height="100" />
@@ -49,26 +54,73 @@
                 </Grid>
 
                 <!-- Menu -->
-                <StackPanel Grid.Row="1" Orientation="Vertical" >
-                    <local:MenuItemControl  />
-                    <local:MenuItemControl  />
-                    <local:MenuItemControl  />
-                    <local:MenuItemControl  />
+                <StackPanel Grid.Row="1" Orientation="Vertical" 
+                            d:DataContext="{x:Static local:MainViewDesign.Instance}" >
+                    <local:MenuItemControl DataContext="{Binding Notes}"/>
+                    <local:MenuItemControl DataContext="{Binding Books}" />
+                    <local:MenuItemControl DataContext="{Binding Calendar}"/>
+                    <local:MenuItemControl DataContext="{Binding Share}" />
+                   
                 </StackPanel>
 
                 <!-- blank space -->
                 <Border Grid.Row="2" />
 
                 <!-- Other Menu -->
-                <StackPanel Grid.Row="3" Orientation="Vertical" >
-                    <local:MenuItemControl  />
-                    <local:MenuItemControl  />
+                <StackPanel Grid.Row="3" Orientation="Vertical"
+                            d:DataContext="{x:Static local:MainViewDesign.Instance}">
+                    <local:MenuItemControl DataContext="{Binding Settings}" />
+                    <local:MenuItemControl DataContext="{Binding Trash}"/>
                 </StackPanel>
 
                 <!-- blank space -->
-                <Border Grid.Row="4" Height="30" />
+                <Border Grid.Row="4" Height="50" />
 
             </Grid>
         </Border>
+        
+        <!-- Main window -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" >
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="{StaticResource DarkBrush}" Width="600" Height="30" Margin="30, 30, 0, 0">
+                        <Grid Margin="20, 4">
+
+                            <TextBlock Text="Search" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                   FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
+                            <TextBlock Text="{StaticResource SearchButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center"
+                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        </Grid>
+                    </Border>
+
+                    <Border Background="{StaticResource DarkBrush}" Width="30" Height="30" Margin="20, 30, 0, 0">
+
+                        <TextBlock Text="{StaticResource NotificationButtonIcon}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+                    </Border>
+
+                    <Border Background="{StaticResource DarkBrush}"
+                        Width="100" Height="30" Margin="20, 30, 0, 0">
+
+                        <Grid Margin="6, 0">
+
+                            <TextBlock Text="Heather" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                   FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
+
+                            <TextBlock Text="{StaticResource UserButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource Small}"
+                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+
+                        </Grid>
+                    </Border>
+                </StackPanel>
+
+            </Grid>
+            
+        </Grid>
     </Grid>
 </Window>

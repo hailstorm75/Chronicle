@@ -2,21 +2,21 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="controls\MenuItemControl.xaml.cs">
+    <Compile Update="Controls\MenuItemControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="controls\MenuItemControl.xaml">
+    <Page Update="Controls\MenuItemControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="styles\Buttons.xaml">
+    <Page Update="Styles\Buttons.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="styles\Colors.xaml">
+    <Page Update="Styles\Colors.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="styles\Fonts.xaml">
+    <Page Update="Styles\Fonts.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

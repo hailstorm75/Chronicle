@@ -23,6 +23,9 @@ namespace Chronicle
         public MainWindow()
         {
             InitializeComponent();
+            
+            DataContext = new MainViewModel();
+
         }
     }
 }
