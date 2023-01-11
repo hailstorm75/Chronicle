@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Input;
 
 namespace Chronicle
 {
@@ -11,6 +13,8 @@ namespace Chronicle
     /// </summary>
     public class MainViewModel : BaseViewModel
     {
+        #region Public Commands
+
         /// <summary>
         /// Minimum width of this application 
         /// </summary>
@@ -22,83 +26,76 @@ namespace Chronicle
         public double MinimumWidth { get; set; } = 1028;
 
         /// <summary>
-        /// Menu item => Note
+        /// Shows list of notes on true
         /// </summary>
-        public MenuItemViewModel Notes { get; set; }
+        public bool IsShowNotesList { get; set; }
 
         /// <summary>
-        /// Menu item => Books
+        /// Shows list of books on true
         /// </summary>
-        public MenuItemViewModel Books { get; set; }
+        public bool IsShowBooksList { get; set; }
+
+        #endregion
+
+        #region Public Commands
 
         /// <summary>
-        /// Menu item => CalendarAndTime
+        /// Command to show or hide list of notes
         /// </summary>
-        public MenuItemViewModel Calendar { get; set; }
+        public ICommand ShowNotesCommand { get; set; }
 
         /// <summary>
-        /// Menu item => Share
+        /// Command to show or hide list of books
         /// </summary>
-        public MenuItemViewModel Share { get; set; }
+        public ICommand ShowBooksCommand { get; set; }
 
-        /// <summary>
-        /// Menu item => Settings
-        /// </summary>
-        public MenuItemViewModel Settings { get; set; }
 
-        /// <summary>
-        /// Menu item => Trash
-        /// </summary>
-        public MenuItemViewModel Trash { get; set; }
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Default constructor
         /// </summary>
         public MainViewModel()
         {
-            // Note
-            Notes = new MenuItemViewModel
-            {
-                Icon = IconType.Notes,
-                Label = "Notes",
-                IsSelected = true,
-            };
+            // Create Commands
+            ShowNotesCommand = new RelayCommand(ShowNotesList);
+            ShowBooksCommand = new RelayCommand(ShowBooksList);
 
-            // Books
-            Books = new MenuItemViewModel
-            {
-                Icon = IconType.Books,
-                Label = "Books"
-            };
-
-            // CalendarAndTime 
-            Calendar = new MenuItemViewModel
-            {
-                Icon = IconType.Calendar,
-                Label = "Calendar"
-            };
-
-            // Share 
-            Share = new MenuItemViewModel
-            {
-                Icon = IconType.Share,
-                Label = "Share"
-            };
-
-            // Settings
-            Settings = new MenuItemViewModel
-            {
-                Icon = IconType.Settings,
-                Label = "Settings"
-            };
-
-            // Trash
-            Trash = new MenuItemViewModel
-            {
-                Icon = IconType.Trash,
-                Label = "Trash"
-            };
-
+            // Update properties
+            OnPropertyChanged(nameof(IsShowNotesList));
+            OnPropertyChanged(nameof(IsShowBooksList));
         }
+
+        #endregion
+
+
+        #region Command Methods
+
+        private void ShowBooksList()
+        {
+            if (IsShowNotesList == true)
+                IsShowNotesList = false;
+
+            IsShowBooksList ^= true;
+
+            OnPropertyChanged(nameof(IsShowNotesList));
+            OnPropertyChanged(nameof(IsShowBooksList));
+        }
+
+        private void ShowNotesList()
+        {
+            if (IsShowBooksList == true)
+                IsShowBooksList = false;
+
+            IsShowNotesList ^= true;
+
+            OnPropertyChanged(nameof(IsShowNotesList));
+            OnPropertyChanged(nameof(IsShowBooksList));
+        }
+
+        #endregion
+
     }
 }

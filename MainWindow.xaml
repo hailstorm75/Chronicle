@@ -22,7 +22,7 @@
 
         <!-- Side menu -->
         <!-- make the border width resizable -->
-        <Border Grid.Column="0" x:Name="Menu" 
+        <Border Grid.Column="0"
                 BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
                 Background="{StaticResource DarkBrush}" >
 
@@ -54,23 +54,53 @@
                 </Grid>
 
                 <!-- Menu -->
-                <StackPanel Grid.Row="1" Orientation="Vertical" 
-                            d:DataContext="{x:Static local:MainViewDesign.Instance}" >
-                    <local:MenuItemControl DataContext="{Binding Notes}"/>
-                    <local:MenuItemControl DataContext="{Binding Books}" />
-                    <local:MenuItemControl DataContext="{Binding Calendar}"/>
-                    <local:MenuItemControl DataContext="{Binding Share}" />
-                   
-                </StackPanel>
+                <Grid Grid.Row="1" d:DataContext="{x:Static local:MainViewDesign.Instance}" >
+
+                    <Grid.RowDefinitions>
+                        <!-- notes -->
+                        <RowDefinition Height="Auto" />
+                        <!-- note items -->
+                        <RowDefinition Height="Auto" />
+                        <!-- books -->
+                        <RowDefinition Height="*" />
+                        <!-- books items -->
+                        <RowDefinition Height="*" />
+                        <!-- calendar and time -->
+                        <RowDefinition Height="Auto" />
+                        <!-- share -->
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region side menu buttons -->
+                    
+                    <!-- notes -->
+                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}" Command="{Binding ShowNotesCommand}" />
+                    <!-- books -->
+                    <RadioButton Grid.Row="2" Style="{StaticResource BooksMenuButton}"  Command="{Binding ShowBooksCommand}" />
+                    <!-- calendar and time -->
+                    <RadioButton Grid.Row="4" Style="{StaticResource CalendarMenuButton}"  />
+                    <!-- share -->
+                    <RadioButton Grid.Row="5" Style="{StaticResource ShareMenuButton}"  />
+                    
+                    <!--#endregion-->
+
+                    <!-- Notes list -->
+                    <!--<Border Grid.Row="1" Background="Wheat" Height="100" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}}" />-->
+                    <Border Grid.Row="1" Background="Wheat" Height="100" Visibility="Visible" />
+
+                    <!-- Books list -->
+                    <Border Grid.Row="3" Background="Wheat" Height="100" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}" />
+
+                </Grid>
 
                 <!-- blank space -->
                 <Border Grid.Row="2" />
 
                 <!-- Other Menu -->
-                <StackPanel Grid.Row="3" Orientation="Vertical"
-                            d:DataContext="{x:Static local:MainViewDesign.Instance}">
-                    <local:MenuItemControl DataContext="{Binding Settings}" />
-                    <local:MenuItemControl DataContext="{Binding Trash}"/>
+                <StackPanel Grid.Row="3" Orientation="Vertical">
+                    
+                    <RadioButton Grid.Row="5" Style="{StaticResource SettingsMenuButton}"  />
+                    <RadioButton Grid.Row="5" Style="{StaticResource TrashMenuButton}"  />
                 </StackPanel>
 
                 <!-- blank space -->
@@ -80,46 +110,44 @@
         </Border>
         
         <!-- Main window -->
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Margin="20, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" >
-                <StackPanel Orientation="Horizontal">
-                    <Border Background="{StaticResource DarkBrush}" Width="600" Height="30" Margin="30, 30, 0, 0">
-                        <Grid Margin="20, 4">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Border Background="{StaticResource DarkBrush}" Width="600" Height="30" Margin="30, 30, 0, 0">
+                    <Grid Margin="20, 4">
 
-                            <TextBlock Text="Search" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
-                                   FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
-                            <TextBlock Text="{StaticResource SearchButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center"
-                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
-                        </Grid>
-                    </Border>
+                        <TextBlock Text="Search" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
+                        <TextBlock Text="{StaticResource SearchButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center"
+                                Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+                    </Grid>
+                </Border>
 
-                    <Border Background="{StaticResource DarkBrush}" Width="30" Height="30" Margin="20, 30, 0, 0">
+                <Border Background="{StaticResource DarkBrush}" Width="30" Height="30" Margin="20, 30, 0, 0">
 
-                        <TextBlock Text="{StaticResource NotificationButtonIcon}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
-                    </Border>
+                    <TextBlock Text="{StaticResource NotificationButtonIcon}" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+                </Border>
 
-                    <Border Background="{StaticResource DarkBrush}"
-                        Width="100" Height="30" Margin="20, 30, 0, 0">
+                <Border Background="{StaticResource DarkBrush}"
+                    Width="100" Height="30" Margin="20, 30, 0, 0">
 
-                        <Grid Margin="6, 0">
+                    <Grid Margin="6, 0">
 
-                            <TextBlock Text="Heather" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
-                                   FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
+                        <TextBlock Text="Heather" Foreground="{StaticResource GrayBrush}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                FontSize="{StaticResource Small}" FontFamily="{StaticResource JostFont}" />
 
-                            <TextBlock Text="{StaticResource UserButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource Small}"
-                                   Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
+                        <TextBlock Text="{StaticResource UserButtonIcon}" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="{StaticResource Small}"
+                                Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
 
-                        </Grid>
-                    </Border>
-                </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
 
-            </Grid>
             
         </Grid>
     </Grid>
