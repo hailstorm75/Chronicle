@@ -2,12 +2,12 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Controls\MenuItemControl.xaml.cs">
+    <Compile Update="Controls\ListControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\MenuItemControl.xaml">
+    <Page Update="Controls\ListControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Buttons.xaml">

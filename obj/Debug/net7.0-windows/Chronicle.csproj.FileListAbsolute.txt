@@ -2,7 +2,6 @@ C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debu
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Styles\Buttons.baml
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Styles\Colors.baml
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Styles\Fonts.baml
-C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Controls\MenuItemControl.g.cs
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
@@ -14,7 +13,6 @@ C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\bin\Debu
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\bin\Debug\net7.0-windows\Chronicle.dll
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\bin\Debug\net7.0-windows\Chronicle.pdb
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\App.baml
-C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Controls\MenuItemControl.baml
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Chronicle.g.resources
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Chronicle.GeneratedMSBuildEditorConfig.editorconfig
@@ -26,3 +24,5 @@ C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debu
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Chronicle.pdb
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Chronicle.genruntimeconfig.cache
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\ref\Chronicle.dll
+C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Controls\ListControl.g.cs
+C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\obj\Debug\net7.0-windows\Controls\ListControl.baml

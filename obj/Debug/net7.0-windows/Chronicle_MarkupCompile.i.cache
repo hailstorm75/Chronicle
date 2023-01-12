@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\App.xaml
-41920123174
+5-1552069905
 
-16-918494788
+17-2073311887
 198-1736014856
-MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+Controls\ListControl.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
-False
+True
 

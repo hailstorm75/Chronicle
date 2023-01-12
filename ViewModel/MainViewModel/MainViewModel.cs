@@ -13,7 +13,7 @@ namespace Chronicle
     /// </summary>
     public class MainViewModel : BaseViewModel
     {
-        #region Public Commands
+        #region Public Properties
 
         /// <summary>
         /// Minimum width of this application 
@@ -28,12 +28,12 @@ namespace Chronicle
         /// <summary>
         /// Shows list of notes on true
         /// </summary>
-        public bool IsShowNotesList { get; set; }
+        public bool IsShowNotesList { get; set; } = false;
 
         /// <summary>
         /// Shows list of books on true
         /// </summary>
-        public bool IsShowBooksList { get; set; }
+        public bool IsShowBooksList { get; set; } = false;
 
         #endregion
 
@@ -69,7 +69,6 @@ namespace Chronicle
         }
 
         #endregion
-
 
         #region Command Methods
 

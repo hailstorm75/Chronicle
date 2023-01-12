@@ -25,7 +25,7 @@ namespace Chronicle
             InitializeComponent();
             
             DataContext = new MainViewModel();
-
+           
         }
     }
 }

@@ -23,7 +23,7 @@
         <!-- Side menu -->
         <!-- make the border width resizable -->
         <Border Grid.Column="0"
-                BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
+                BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 0, 0"
                 Background="{StaticResource DarkBrush}" >
 
             <Grid>
@@ -54,17 +54,15 @@
                 </Grid>
 
                 <!-- Menu -->
-                <Grid Grid.Row="1" d:DataContext="{x:Static local:MainViewDesign.Instance}" >
+                <Grid Grid.Row="1" >
 
                     <Grid.RowDefinitions>
                         <!-- notes -->
-                        <RowDefinition Height="Auto" />
                         <!-- note items -->
                         <RowDefinition Height="Auto" />
                         <!-- books -->
-                        <RowDefinition Height="*" />
                         <!-- books items -->
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
                         <!-- calendar and time -->
                         <RowDefinition Height="Auto" />
                         <!-- share -->
@@ -74,23 +72,41 @@
                     <!--#region side menu buttons -->
                     
                     <!-- notes -->
-                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}" Command="{Binding ShowNotesCommand}" />
+                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}" Command="{Binding ShowNotesCommand}" VerticalAlignment="Top" />
                     <!-- books -->
-                    <RadioButton Grid.Row="2" Style="{StaticResource BooksMenuButton}"  Command="{Binding ShowBooksCommand}" />
+                    <RadioButton Grid.Row="1" Style="{StaticResource BooksMenuButton}" Command="{Binding ShowBooksCommand}" VerticalAlignment="Top" />
                     <!-- calendar and time -->
-                    <RadioButton Grid.Row="4" Style="{StaticResource CalendarMenuButton}"  />
+                    <RadioButton Grid.Row="2" Style="{StaticResource CalendarMenuButton}" />
                     <!-- share -->
-                    <RadioButton Grid.Row="5" Style="{StaticResource ShareMenuButton}"  />
+                    <RadioButton Grid.Row="3" Style="{StaticResource ShareMenuButton}" />
                     
                     <!--#endregion-->
 
                     <!-- Notes list -->
-                    <!--<Border Grid.Row="1" Background="Wheat" Height="100" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}}" />-->
-                    <Border Grid.Row="1" Background="Wheat" Height="100" Visibility="Visible" />
+                    <Border Grid.Row="0" Height="120" Background="{StaticResource DarkBrush}" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" 
+                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
 
+                            <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
+                                        BorderThickness="2, 2, 2, 0" Margin="-6">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="15"/>
+                                </Border.Effect>
+                            </Border>
+
+                    </Border>
+                    
                     <!-- Books list -->
-                    <Border Grid.Row="3" Background="Wheat" Height="100" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}" />
+                    <Border Grid.Row="1" Background="{StaticResource DarkBrush}" Height="120" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}"
+                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
 
+                        <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
+                                        BorderThickness="2, 2, 2, 0" Margin="-6">
+                            <Border.Effect>
+                                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="15"/>
+                            </Border.Effect>
+                        </Border>
+
+                    </Border>
                 </Grid>
 
                 <!-- blank space -->
