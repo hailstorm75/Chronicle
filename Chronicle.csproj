@@ -15,6 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="ViewModel\List\.Design\BooksListControlDesignModel.cs" />
+    <Compile Include="ViewModel\List\.Design\ListControlItemDesignModel.cs" />
+    <Compile Include="ViewModel\List\.Design\NotesListControlDesignModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include=".resources\fonts\Jost-Regular.ttf" />
   </ItemGroup>
   
@@ -29,11 +35,6 @@
 
   <ItemGroup>
     <Page Include="App.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModel\MainViewModel\Design\" />
-    <Folder Include="ViewModel\Menu\" />
   </ItemGroup>
 
 </Project>

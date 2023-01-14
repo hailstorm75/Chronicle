@@ -19,7 +19,7 @@
                 <ControlTemplate TargetType="{x:Type RadioButton}">
 
                     <!-- Menu title -->
-                    <Border Grid.Row="0" Background="{TemplateBinding Background}" BorderThickness="0" Padding="8, 2">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" Padding="8, 2">
 
                         <Grid >
                             <Grid.ColumnDefinitions>
@@ -74,7 +74,7 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="0"
-                                    Text="{StaticResource NoteButtonIcon}" FontFamily="{StaticResource FontAwesomeSolid}"
+                                    Text="{StaticResource BookButtonIcon}" FontFamily="{StaticResource FontAwesomeSolid}"
                                     VerticalAlignment="Center" Margin="50, 0, -50, 0" />
 
                             <TextBlock Grid.Column="1"
@@ -287,7 +287,39 @@
         </Setter>
     </Style>
 
-
     <!--#endregion Menu button -->
+
+    <!-- List button style -->
+    <Style x:Key="ListItemButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="35" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}" />
+        <Setter Property="FontFamily" Value="{StaticResource JostFont}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="0" Padding="8, 2">
+
+                        <Grid Margin="0, 6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="45" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0"
+                                    Text="{StaticResource FeatherIcon}" FontFamily="{StaticResource FontAwesomeSolid}"
+                                    VerticalAlignment="Center" Margin="10, 0, 10, 0" Padding="4" />
+
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" Margin="0, 0, 40, 0" />
+                        </Grid>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
 
 </ResourceDictionary>

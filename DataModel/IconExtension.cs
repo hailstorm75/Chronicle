@@ -8,33 +8,17 @@ namespace Chronicle
 {
     public static class IconExtension
     {
-        public static string ToFontAwesome(this IconType type)
+        public static string ToFontAwesome(this ListIconType type)
         {
             switch (type)
             {
-                // Return notes icon
-                case IconType.Notes:
-                    return "\uf249";
+                // Return notes icon for list item
+                case ListIconType.Notes:
+                    return "\uf56b";
 
-                // Return books icon
-                case IconType.Books:
-                    return "\uf02d";
-
-                // Return picture icon
-                case IconType.Calendar:
-                    return "\uf783";
-
-                // Return share icon
-                case IconType.Share:
-                    return "\uf1e0";
-
-                // Return settings icon
-                case IconType.Settings:
-                    return "\uf013";
-
-                // Return trash icon
-                case IconType.Trash:
-                    return "\uf2ed";
+                // Return books icon for list item
+                case ListIconType.Books:
+                    return "\uf02a";
 
                 // If there's nothing to do, return null
                 default:

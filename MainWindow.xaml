@@ -83,30 +83,43 @@
                     <!--#endregion-->
 
                     <!-- Notes list -->
-                    <Border Grid.Row="0" Height="120" Background="{StaticResource DarkBrush}" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" 
-                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
-
-                            <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
-                                        BorderThickness="2, 2, 2, 0" Margin="-6">
-                                <Border.Effect>
-                                    <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="15"/>
-                                </Border.Effect>
-                            </Border>
-
-                    </Border>
-                    
-                    <!-- Books list -->
-                    <Border Grid.Row="1" Background="{StaticResource DarkBrush}" Height="120" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}"
+                    <!--<Border Grid.Row="0" Height="120" Background="{StaticResource DarkBrush}" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" 
                             VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
 
                         <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
-                                        BorderThickness="2, 2, 2, 0" Margin="-6">
+                                    BorderThickness="4, 4, 4, 0" Margin="-4">
                             <Border.Effect>
-                                <DropShadowEffect Color="White" ShadowDepth="0" BlurRadius="15"/>
+                                <DropShadowEffect Color="Black" ShadowDepth="0" BlurRadius="20"/>
                             </Border.Effect>
                         </Border>
 
+                    </Border>-->
+
+                    <Border Grid.Row="0" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" >
+                        <local:NotesListControl Margin="0, 40, 0, 0" Height="120" />
                     </Border>
+                    
+
+                    <!-- Books list -->
+                    <!--<Border Grid.Row="1" Background="{StaticResource DarkBrush}" Height="120" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}"
+                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
+
+                        <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
+                                        BorderThickness="4, 4, 4, 0" Margin="-4">
+                            <Border.Effect>
+                                <DropShadowEffect Color="Black" ShadowDepth="0" BlurRadius="20"/>
+                            </Border.Effect>
+                        </Border>
+
+                    </Border>-->
+
+                    <Border Grid.Row="1" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" >
+                        <local:BooksListControl Margin="0, 40, 0, 0" Height="120" />
+                    </Border>
+                    
+
+
+
                 </Grid>
 
                 <!-- blank space -->

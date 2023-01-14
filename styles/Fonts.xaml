@@ -25,5 +25,6 @@
     <system:String x:Key="NotificationButtonIcon">&#xf0f3;</system:String>
     <system:String x:Key="UserButtonIcon">&#xf2bd;</system:String>
     <system:String x:Key="VerticalDotButtonIcon">&#xf142;</system:String>
-    
+    <system:String x:Key="FeatherIcon">&#xf56b;</system:String>
+
 </ResourceDictionary>
