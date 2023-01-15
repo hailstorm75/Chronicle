@@ -23,7 +23,7 @@
         <!-- Side menu -->
         <!-- make the border width resizable -->
         <Border Grid.Column="0"
-                BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 0, 0"
+                BorderBrush="{StaticResource GrayBrush}" BorderThickness="0, 0, 1, 0"
                 Background="{StaticResource DarkBrush}" >
 
             <Grid>
@@ -83,49 +83,21 @@
                     <!--#endregion-->
 
                     <!-- Notes list -->
-                    <!--<Border Grid.Row="0" Height="120" Background="{StaticResource DarkBrush}" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" 
-                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
-
-                        <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
-                                    BorderThickness="4, 4, 4, 0" Margin="-4">
-                            <Border.Effect>
-                                <DropShadowEffect Color="Black" ShadowDepth="0" BlurRadius="20"/>
-                            </Border.Effect>
-                        </Border>
-
-                    </Border>-->
-
-                    <Border Grid.Row="0" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" >
+                    <Border Grid.Row="0" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
                         <local:NotesListControl Margin="0, 40, 0, 0" Height="120" />
                     </Border>
                     
-
                     <!-- Books list -->
-                    <!--<Border Grid.Row="1" Background="{StaticResource DarkBrush}" Height="120" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}}"
-                            VerticalAlignment="Bottom" BorderThickness="1" ClipToBounds="True" Margin="0, 40, 0, 0" >
-
-                        <Border Background="Transparent" BorderBrush="{StaticResource DarkBrush}" 
-                                        BorderThickness="4, 4, 4, 0" Margin="-4">
-                            <Border.Effect>
-                                <DropShadowEffect Color="Black" ShadowDepth="0" BlurRadius="20"/>
-                            </Border.Effect>
-                        </Border>
-
-                    </Border>-->
-
-                    <Border Grid.Row="1" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Visible}" >
+                    <Border Grid.Row="1" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
                         <local:BooksListControl Margin="0, 40, 0, 0" Height="120" />
                     </Border>
-                    
-
-
 
                 </Grid>
 
                 <!-- blank space -->
                 <Border Grid.Row="2" />
 
-                <!-- Other Menu -->
+                    <!-- Other Menu -->
                 <StackPanel Grid.Row="3" Orientation="Vertical">
                     
                     <RadioButton Grid.Row="5" Style="{StaticResource SettingsMenuButton}"  />
@@ -139,13 +111,17 @@
         </Border>
         
         <!-- Main window -->
-        <Grid Grid.Column="1" Margin="20, 0">
+        <Grid Grid.Column="1" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <!-- Search -> Notification -> User -->
+            <StackPanel Grid.Row="0" Margin="20, 0"
+                        Orientation="Horizontal" HorizontalAlignment="Right" >
+
+                <!-- Search -->
                 <Border Background="{StaticResource DarkBrush}" Width="600" Height="30" Margin="30, 30, 0, 0">
                     <Grid Margin="20, 4">
 
@@ -156,12 +132,14 @@
                     </Grid>
                 </Border>
 
+                <!-- Notification -->
                 <Border Background="{StaticResource DarkBrush}" Width="30" Height="30" Margin="20, 30, 0, 0">
 
                     <TextBlock Text="{StaticResource NotificationButtonIcon}" HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
                 </Border>
 
+                <!-- User -->
                 <Border Background="{StaticResource DarkBrush}"
                     Width="100" Height="30" Margin="20, 30, 0, 0">
 
@@ -174,9 +152,33 @@
                                 Foreground="{StaticResource GrayBrush}" FontFamily="{StaticResource FontAwesomeSolid}" />
 
                     </Grid>
+                    
                 </Border>
+                
             </StackPanel>
+            
+            <!-- Content / Text Area-->
+            <Grid Grid.Row="1" Margin="0, 15, 0, 0">
+                <Grid.RowDefinitions>
+                    <!-- Tab -->
+                    <RowDefinition Height="Auto" />
+                    <!-- Main content area -->
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
 
+                <!-- Tab -->
+                <Canvas Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="36">
+                    <local:TabControlContainer Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="36" />
+                </Canvas>
+
+                <!-- Text Area -->
+                <Grid Grid.Row="1" Background="{StaticResource DarkBrush}">
+                    <TextBox Background="Transparent" TextAlignment="Left" Foreground="{StaticResource GrayBrush}" 
+                             AcceptsTab="True" AcceptsReturn="True" BorderBrush="{x:Null}" BorderThickness="0"
+                             FontFamily="{StaticResource JostFont}" FontSize="{StaticResource Small}" Padding="20 20 40 5" CaretBrush="{StaticResource GrayBrush}" />
+                </Grid>
+                
+            </Grid>
             
         </Grid>
     </Grid>

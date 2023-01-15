@@ -11,6 +11,12 @@
     <Compile Update="Controls\ListControlItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\TabControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\TabControlContainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\BooksListControl.xaml">
@@ -20,6 +26,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\ListControlItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\TabControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\TabControlContainer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Buttons.xaml">

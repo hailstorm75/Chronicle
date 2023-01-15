@@ -10,6 +10,5 @@
     <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF" />
     <SolidColorBrush x:Key="GrayBrush" Color="#767676" />
     <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource Blue}" />
-    <SolidColorBrush x:Key="PurpleBrush" Color="#8BC3EB" />
 
 </ResourceDictionary>
