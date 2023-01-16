@@ -11,10 +11,16 @@
     <Compile Update="Controls\ListControlItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\PageHost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\TabControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\TabControlContainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\NotePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -28,10 +34,16 @@
     <Page Update="Controls\ListControlItem.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Controls\PageHost.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\TabControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\TabControlContainer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\NotePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Buttons.xaml">

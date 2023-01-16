@@ -158,27 +158,35 @@
             </StackPanel>
             
             <!-- Content / Text Area-->
-            <Grid Grid.Row="1" Margin="0, 15, 0, 0">
+            <local:PageHost Grid.Row="1" Margin="0, 15, 0, 0" 
+						    CurrentPage="{Binding Application.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}}"
+						    CurrentPageViewModel="{Binding Application.CurrentPageViewModel, Source={x:Static local:ViewModelLocator.Instance}}" />
+
+                <!--#region Main area content -->
+
+            <!--<Grid Grid.Row="1" Margin="0, 15, 0, 0">
                 <Grid.RowDefinitions>
-                    <!-- Tab -->
+                    --><!-- Tab --><!--
                     <RowDefinition Height="Auto" />
-                    <!-- Main content area -->
+                    --><!-- Main content area --><!--
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <!-- Tab -->
+                --><!-- Tab --><!--
                 <Canvas Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="36">
                     <local:TabControlContainer Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="36" />
                 </Canvas>
 
-                <!-- Text Area -->
+                --><!-- Text Area --><!--
                 <Grid Grid.Row="1" Background="{StaticResource DarkBrush}">
-                    <TextBox Background="Transparent" TextAlignment="Left" Foreground="{StaticResource GrayBrush}" 
-                             AcceptsTab="True" AcceptsReturn="True" BorderBrush="{x:Null}" BorderThickness="0"
+                    <TextBox Background="Transparent" TextAlignment="Left" Foreground="{StaticResource GrayBrush}" TextWrapping="Wrap"
+                             AcceptsTab="True" AcceptsReturn="True" BorderBrush="{x:Null}" BorderThickness="0" HorizontalScrollBarVisibility="Disabled"
                              FontFamily="{StaticResource JostFont}" FontSize="{StaticResource Small}" Padding="20 20 40 5" CaretBrush="{StaticResource GrayBrush}" />
                 </Grid>
                 
-            </Grid>
+            </Grid>-->
+            
+            <!--#endregion--> 
             
         </Grid>
     </Grid>

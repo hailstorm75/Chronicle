@@ -35,6 +35,17 @@ namespace Chronicle
         /// </summary>
         public bool IsShowBooksList { get; set; } = false;
 
+        /// <summary>
+        /// The current page of this application
+        /// default to note
+        /// </summary>
+        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Note;
+
+        /// <summary>
+        /// The view model to use for the current page when the Current page changes
+        /// </summary>
+        public BaseViewModel CurrentPageViewModel { get; set; }
+
         #endregion
 
         #region Public Commands
@@ -72,24 +83,38 @@ namespace Chronicle
 
         #region Command Methods
 
+        /// <summary>
+        /// Show or close book list
+        /// </summary>
         private void ShowBooksList()
         {
+            // if note list is open
             if (IsShowNotesList == true)
+                // Close it
                 IsShowNotesList = false;
 
+            // Toggle book list
             IsShowBooksList ^= true;
 
+            // Update properties
             OnPropertyChanged(nameof(IsShowNotesList));
             OnPropertyChanged(nameof(IsShowBooksList));
         }
 
+        /// <summary>
+        /// Show or close note list
+        /// </summary>
         private void ShowNotesList()
         {
+            // If book list is open
             if (IsShowBooksList == true)
+                // Close it
                 IsShowBooksList = false;
 
+            // Toggle note list
             IsShowNotesList ^= true;
 
+            // Update properties
             OnPropertyChanged(nameof(IsShowNotesList));
             OnPropertyChanged(nameof(IsShowBooksList));
         }

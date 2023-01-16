@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\okwut\OneDrive\Documents\Projects\Software\Chronicle\Chronicle\App.xaml
-92106285424
+11-1301284786
 
-31211293257
-198-1736014856
-Controls\BooksListControl.xaml;Controls\ListControlItem.xaml;Controls\NotesListControl.xaml;Controls\TabControl.xaml;Controls\TabControlContainer.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
+40-1753986909
+2192061377607
+Controls\BooksListControl.xaml;Controls\ListControlItem.xaml;Controls\NotesListControl.xaml;Controls\PageHost.xaml;Controls\TabControl.xaml;Controls\TabControlContainer.xaml;MainWindow.xaml;Pages\NotePage.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;
 
-True
+False
 

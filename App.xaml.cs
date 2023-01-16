@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dna;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,24 @@ namespace Chronicle
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            // Setup the main application
+            ApplicationSetup();
+
+            // Show the main window
+            Current.MainWindow = new MainWindow();
+            Current.MainWindow.Show();
+        }
+
+        private void ApplicationSetup()
+        {
+            // Setup the Dna framework
+            Framework.Construct<DefaultFrameworkConstruction>()
+                 .AddViewModels()
+                 .Build();
+        }
     }
 }
