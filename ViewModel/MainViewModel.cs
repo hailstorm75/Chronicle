@@ -89,7 +89,7 @@ namespace Chronicle
         private void ShowBooksList()
         {
             // if note list is open
-            if (IsShowNotesList == true)
+            if (IsShowNotesList == true || CurrentPage == ApplicationPage.Note)
                 // Close it
                 IsShowNotesList = false;
 
@@ -107,7 +107,7 @@ namespace Chronicle
         private void ShowNotesList()
         {
             // If book list is open
-            if (IsShowBooksList == true)
+            if (IsShowBooksList == true || CurrentPage == ApplicationPage.Book)
                 // Close it
                 IsShowBooksList = false;
 
@@ -117,6 +117,29 @@ namespace Chronicle
             // Update properties
             OnPropertyChanged(nameof(IsShowNotesList));
             OnPropertyChanged(nameof(IsShowBooksList));
+        }
+
+        #endregion
+
+        #region Public Helpers
+
+        
+        public void GotoPage(ApplicationPage page, BaseViewModel viewModel = null)
+        {
+            // Set the current page
+            CurrentPageViewModel = viewModel;
+
+            // See if page has changed
+            var different = CurrentPage != page;
+
+            // Sets current page value
+            CurrentPage = page;
+
+            // If page hasn't changed fire off notification to update page
+            // Fire off a currentPage changed event
+            //if(!different)
+            OnPropertyChanged(nameof(CurrentPage));
+          
         }
 
         #endregion

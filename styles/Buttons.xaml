@@ -93,7 +93,6 @@
         <Setter Property="FontSize" Value="{StaticResource Small}" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="270" />
-        <!--<Setter Property="Panel.ZIndex" Value="1" />-->
 
         <Setter Property="Template">
             <Setter.Value>
@@ -124,13 +123,9 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -170,13 +165,9 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -216,14 +207,10 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
-
+                        
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -262,13 +249,9 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -308,13 +291,9 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -354,13 +333,9 @@
                             <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                         </Trigger>
 
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                         </Trigger>
-
-                        <DataTrigger Binding="{Binding IsSelected}" Value="True" >
-                            <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                        </DataTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

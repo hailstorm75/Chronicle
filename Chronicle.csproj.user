@@ -5,6 +5,9 @@
     <Compile Update="Controls\BooksListControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\SideMenu\MenuButtonControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\NotesListControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -14,10 +17,16 @@
     <Compile Update="Controls\PageHost.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Controls\SideMenu\MenuButtonParentControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\TabControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\TabControlContainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\BookPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\NotePage.xaml.cs">
@@ -26,6 +35,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Controls\BooksListControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SideMenu\MenuButtonControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\NotesListControl.xaml">
@@ -37,10 +49,16 @@
     <Page Update="Controls\PageHost.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Controls\SideMenu\MenuButtonParentControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\TabControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\TabControlContainer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\BookPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\NotePage.xaml">

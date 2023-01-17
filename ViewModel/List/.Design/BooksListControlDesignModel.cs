@@ -29,37 +29,37 @@ namespace Chronicle
                 new ListControlItemViewModel
                 {
                     FileName = "Microcontroller 101.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Healthy Life Style.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Embedded System Architecture.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Computer Architecture.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Illusion Of Time.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Cosmic tales.",
-                    Icon = ListIconType.Books
+                    Icon = IconType.BooksItem
                 },
 
             };

@@ -11,7 +11,7 @@ namespace Chronicle
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return ((ListIconType)value).ToFontAwesome();
+            return ((IconType)value).ToFontAwesome();
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

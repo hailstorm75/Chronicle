@@ -20,7 +20,7 @@ namespace Chronicle
         /// <summary>
         /// Type of icon to use
         /// </summary>
-        public ListIconType Icon { get; set; }
+        public IconType Icon { get; set; }
 
     }
 }

@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 namespace Chronicle
 {
     /// <summary>
-    /// Type of a file (Note or Book)
+    /// View model for menu button
     /// </summary>
-    public enum ListIconType
+    public class MenuButtonViewModel : BaseViewModel
     {
         /// <summary>
-        /// Notes
+        /// The icon for each button 
         /// </summary>
-        Notes,
+        public IconType MenuIcon { get; set; }
 
         /// <summary>
-        /// Books
+        /// The title of each menu button
         /// </summary>
-        Books,
+        public string MenuTitle { get; set; }
+
     }
 }

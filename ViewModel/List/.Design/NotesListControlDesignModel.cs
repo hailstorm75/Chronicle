@@ -28,37 +28,37 @@ namespace Chronicle
                 new ListControlItemViewModel
                 {
                     FileName = "Walk the dog after work.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Grocery list.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Tasks to complete at work.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Meeting at 10am with CEO.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "This year meditation session times.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
                 new ListControlItemViewModel
                 {
                     FileName = "Gym membership code.",
-                    Icon = ListIconType.Notes
+                    Icon = IconType.NotesItem
                 },
 
             };

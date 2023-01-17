@@ -1,4 +1,5 @@
 ﻿using Chronicle;
+using Chronicle.Pages;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -15,9 +16,12 @@ namespace Chronicle
 			switch(page)
 			{
 				case ApplicationPage.Note:
-					return new NotePage { DataContext = new NotePageViewModel()};
+					return new NotePage { DataContext = new NotePageViewModel() };
 
-				default:
+                case ApplicationPage.Book:
+                    return new BookPage { DataContext = new BookPageViewModel() };
+
+                default:
 					Debugger.Break();
 					return null;
 			}

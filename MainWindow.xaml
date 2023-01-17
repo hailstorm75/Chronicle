@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Chronicle"
         mc:Ignorable="d"
         
+        x:Name="Main"
         Height="800" Width="1082"
         MinHeight="{Binding MinimumHeight}"
         MinWidth="{Binding MinimumWidth}"
@@ -34,11 +35,11 @@
                     <!-- Menu -->
                     <RowDefinition Height="Auto" />
                     <!-- blank space -->
-                    <RowDefinition Height="*" />
-                    <!-- Other menu -->
+                    <!--<RowDefinition Height="*" />
+                    --><!-- Other menu --><!--
                     <RowDefinition Height="Auto" />
-                    <!-- blank space -->
-                    <RowDefinition Height="Auto"/>
+                    --><!-- blank space --><!--
+                    <RowDefinition Height="Auto"/>-->
                 </Grid.RowDefinitions>
 
                 <!-- App title -->
@@ -53,59 +54,68 @@
                     </TextBlock>
                 </Grid>
 
-                <!-- Menu -->
-                <Grid Grid.Row="1" >
+                <!--#region Menu -->
+                <!--<Grid Grid.Row="1" >
 
                     <Grid.RowDefinitions>
-                        <!-- notes -->
-                        <!-- note items -->
+                        --><!-- notes -->
+                        <!-- note items --><!--
                         <RowDefinition Height="Auto" />
-                        <!-- books -->
-                        <!-- books items -->
+                        --><!-- books -->
+                        <!-- books items --><!--
                         <RowDefinition Height="Auto" />
-                        <!-- calendar and time -->
+                        --><!-- calendar and time --><!--
                         <RowDefinition Height="Auto" />
-                        <!-- share -->
+                        --><!-- share --><!--
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <!--#region side menu buttons -->
+                    --><!--#region side menu buttons -->
                     
-                    <!-- notes -->
-                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}" Command="{Binding ShowNotesCommand}" VerticalAlignment="Top" />
-                    <!-- books -->
-                    <RadioButton Grid.Row="1" Style="{StaticResource BooksMenuButton}" Command="{Binding ShowBooksCommand}" VerticalAlignment="Top" />
-                    <!-- calendar and time -->
+                    <!-- notes --><!--
+                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}"
+                                 Command="{Binding ShowNotesCommand}" VerticalAlignment="Top" />
+                    
+                    --><!-- books --><!--
+                    <RadioButton Grid.Row="1" Style="{StaticResource BooksMenuButton}"
+                                 Command="{Binding ShowBooksCommand}" VerticalAlignment="Top" />
+                    --><!-- calendar and time --><!--
                     <RadioButton Grid.Row="2" Style="{StaticResource CalendarMenuButton}" />
-                    <!-- share -->
+                    --><!-- share --><!--
                     <RadioButton Grid.Row="3" Style="{StaticResource ShareMenuButton}" />
                     
-                    <!--#endregion-->
+                    --><!--#endregion-->
 
-                    <!-- Notes list -->
+                    <!-- Notes list --><!--
                     <Border Grid.Row="0" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
                         <local:NotesListControl Margin="0, 40, 0, 0" Height="120" />
                     </Border>
                     
-                    <!-- Books list -->
+                    --><!-- Books list --><!--
                     <Border Grid.Row="1" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
                         <local:BooksListControl Margin="0, 40, 0, 0" Height="120" />
                     </Border>
 
+                </Grid>-->
+                
+                <!--#endregion-->
+
+                <Grid Grid.Row="1" Height="{Binding ActualHeight, ElementName=Main}">
+                    <local:MenuButtonParentControl />
                 </Grid>
 
-                <!-- blank space -->
+                    <!-- blank space --><!--
                 <Border Grid.Row="2" />
 
-                    <!-- Other Menu -->
+                    --><!-- Other Menu --><!--
                 <StackPanel Grid.Row="3" Orientation="Vertical">
-                    
+
                     <RadioButton Grid.Row="5" Style="{StaticResource SettingsMenuButton}"  />
-                    <RadioButton Grid.Row="5" Style="{StaticResource TrashMenuButton}"  />
+                    <RadioButton Grid.Row="5" Style="{StaticResource TrashMenuButton}" />
                 </StackPanel>
 
-                <!-- blank space -->
-                <Border Grid.Row="4" Height="50" />
+                --><!-- blank space --><!--
+                <Border Grid.Row="4" Height="50" />-->
 
             </Grid>
         </Border>

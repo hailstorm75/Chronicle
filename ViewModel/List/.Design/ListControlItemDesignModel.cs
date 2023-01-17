@@ -24,7 +24,7 @@ namespace Chronicle
         {
             // For design-time
             FileName = "Walk the dog";
-            Icon = ListIconType.Notes;
+            Icon = IconType.NotesItem;
         }
     }
 }
