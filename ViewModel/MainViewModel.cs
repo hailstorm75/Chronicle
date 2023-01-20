@@ -18,12 +18,12 @@ namespace Chronicle
         /// <summary>
         /// Minimum width of this application 
         /// </summary>
-        public double MinimumHeight { get; set; } = 600;
+        public double MinimumHeight { get; set; } = 750;
 
         /// <summary>
         /// Minimum height of this application
         /// </summary>
-        public double MinimumWidth { get; set; } = 1028;
+        public double MinimumWidth { get; set; } = 1048;
 
         /// <summary>
         /// Shows list of notes on true

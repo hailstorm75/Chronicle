@@ -23,6 +23,8 @@ namespace Chronicle.Pages
         public BookPage()
         {
             InitializeComponent();
+
+            DataContext = new BookPageViewModel();
         }
     }
 }

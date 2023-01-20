@@ -41,13 +41,13 @@
                         </Border>
 
                         <ControlTemplate.Triggers>
-                            
+
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                             </Trigger>
 
-                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
-                                <Setter Property="TextBlock.Foreground" Value="{StaticResource BlueBrush}"  />
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True" >
+                                <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                             </DataTrigger>
 
                         </ControlTemplate.Triggers>
@@ -57,6 +57,10 @@
         </Style>
     </UserControl.Resources>
 
-    <ContentControl Style="{StaticResource MenuButton}" />
+    <ContentControl Style="{StaticResource MenuButton}" >
+        <ContentControl.InputBindings>
+            <MouseBinding Command="{Binding MenuCommand}" MouseAction="LeftClick" />
+        </ContentControl.InputBindings>
+    </ContentControl>
     
 </UserControl>

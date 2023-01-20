@@ -21,16 +21,34 @@ namespace Chronicle
         /// </summary>
         BooksItem,
 
+        /// <summary>
+        /// Note 
+        /// </summary>
         Note,
 
+        /// <summary>
+        /// Book
+        /// </summary>
         Book,
 
+        /// <summary>
+        /// Calendar
+        /// </summary>
         Calendar,
 
+        /// <summary>
+        /// Share
+        /// </summary>
         Share,
 
+        /// <summary>
+        /// Settings
+        /// </summary>
         Settings,
 
+        /// <summary>
+        /// Trash
+        /// </summary>
         Trash,
     }
 }

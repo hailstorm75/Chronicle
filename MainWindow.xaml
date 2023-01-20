@@ -100,8 +100,9 @@
                 
                 <!--#endregion-->
 
+                <!-- Side menu --> <!-- update height value -->
                 <Grid Grid.Row="1" Height="{Binding ActualHeight, ElementName=Main}">
-                    <local:MenuButtonParentControl />
+                    <local:MenuButtonParentControl  />
                 </Grid>
 
                     <!-- blank space --><!--

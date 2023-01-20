@@ -42,7 +42,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
-        <Border Grid.Row="3" Height="60" />
+        <Border Grid.Row="3" Height="50" />
 
     </Grid>
 

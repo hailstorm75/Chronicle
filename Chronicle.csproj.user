@@ -2,13 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Controls\BooksListControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Controls\SideMenu\MenuButtonControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\NotesListControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\ListControlItem.xaml.cs">
@@ -34,13 +28,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\BooksListControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Controls\SideMenu\MenuButtonControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\NotesListControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\ListControlItem.xaml">

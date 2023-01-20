@@ -14,15 +14,16 @@ namespace Chronicle
 		/// An action to run
 		/// </summary>
 		private Action mAction;
+        private object v;
 
-		#endregion
+        #endregion
 
-		#region Public Events
+        #region Public Events
 
-		/// <summary>
-		/// The event that gets fired when required 
-		/// </summary>
-		public event EventHandler CanExecuteChanged = (sender, e) => { };
+        /// <summary>
+        /// The event that gets fired when required 
+        /// </summary>
+        public event EventHandler CanExecuteChanged = (sender, e) => { };
 
 		#endregion
 
@@ -60,6 +61,11 @@ namespace Chronicle
 			mAction = action;
 		}
 
-		#endregion
-	}
+        public RelayCommand(object v)
+        {
+            this.v = v;
+        }
+
+        #endregion
+    }
 }

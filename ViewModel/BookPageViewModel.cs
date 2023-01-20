@@ -11,5 +11,11 @@ namespace Chronicle
     /// </summary>
     public class BookPageViewModel : BaseViewModel
     {
+        public string Label { get; set; } 
+
+        public BookPageViewModel()
+        {
+            Label = "PAGE UNDER CONSTRUCTION";
+        }
     }
 }
