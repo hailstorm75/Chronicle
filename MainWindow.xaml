@@ -54,69 +54,10 @@
                     </TextBlock>
                 </Grid>
 
-                <!--#region Menu -->
-                <!--<Grid Grid.Row="1" >
-
-                    <Grid.RowDefinitions>
-                        --><!-- notes -->
-                        <!-- note items --><!--
-                        <RowDefinition Height="Auto" />
-                        --><!-- books -->
-                        <!-- books items --><!--
-                        <RowDefinition Height="Auto" />
-                        --><!-- calendar and time --><!--
-                        <RowDefinition Height="Auto" />
-                        --><!-- share --><!--
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-
-                    --><!--#region side menu buttons -->
-                    
-                    <!-- notes --><!--
-                    <RadioButton Grid.Row="0" Style="{StaticResource NotesMenuButton}"
-                                 Command="{Binding ShowNotesCommand}" VerticalAlignment="Top" />
-                    
-                    --><!-- books --><!--
-                    <RadioButton Grid.Row="1" Style="{StaticResource BooksMenuButton}"
-                                 Command="{Binding ShowBooksCommand}" VerticalAlignment="Top" />
-                    --><!-- calendar and time --><!--
-                    <RadioButton Grid.Row="2" Style="{StaticResource CalendarMenuButton}" />
-                    --><!-- share --><!--
-                    <RadioButton Grid.Row="3" Style="{StaticResource ShareMenuButton}" />
-                    
-                    --><!--#endregion-->
-
-                    <!-- Notes list --><!--
-                    <Border Grid.Row="0" Visibility="{Binding IsShowNotesList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
-                        <local:NotesListControl Margin="0, 40, 0, 0" Height="120" />
-                    </Border>
-                    
-                    --><!-- Books list --><!--
-                    <Border Grid.Row="1" Visibility="{Binding IsShowBooksList, Converter={local:BooleanToVisibilityConverter}, FallbackValue=Collapsed}" >
-                        <local:BooksListControl Margin="0, 40, 0, 0" Height="120" />
-                    </Border>
-
-                </Grid>-->
-                
-                <!--#endregion-->
-
                 <!-- Side menu --> <!-- update height value -->
                 <Grid Grid.Row="1" Height="{Binding ActualHeight, ElementName=Main}">
                     <local:MenuButtonParentControl  />
                 </Grid>
-
-                    <!-- blank space --><!--
-                <Border Grid.Row="2" />
-
-                    --><!-- Other Menu --><!--
-                <StackPanel Grid.Row="3" Orientation="Vertical">
-
-                    <RadioButton Grid.Row="5" Style="{StaticResource SettingsMenuButton}"  />
-                    <RadioButton Grid.Row="5" Style="{StaticResource TrashMenuButton}" />
-                </StackPanel>
-
-                --><!-- blank space --><!--
-                <Border Grid.Row="4" Height="50" />-->
 
             </Grid>
         </Border>
@@ -169,36 +110,11 @@
             </StackPanel>
             
             <!-- Content / Text Area-->
-            <local:PageHost Grid.Row="1" Margin="0, 15, 0, 0" 
-						    CurrentPage="{Binding Application.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}}"
-						    CurrentPageViewModel="{Binding Application.CurrentPageViewModel, Source={x:Static local:ViewModelLocator.Instance}}" />
+            <Border Grid.Row="1" Margin="0, 15, 0, 0" >
+                <Frame local:NoFrameHistoryAttachedProperty.Value="True" 
+                       Content="{Binding Application.CurrentPage, Source={x:Static local:ViewModelLocator.Instance}, Converter={local:PageValueConverter}}" />
+            </Border>
 
-                <!--#region Main area content -->
-
-            <!--<Grid Grid.Row="1" Margin="0, 15, 0, 0">
-                <Grid.RowDefinitions>
-                    --><!-- Tab --><!--
-                    <RowDefinition Height="Auto" />
-                    --><!-- Main content area --><!--
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                --><!-- Tab --><!--
-                <Canvas Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="36">
-                    <local:TabControlContainer Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="36" />
-                </Canvas>
-
-                --><!-- Text Area --><!--
-                <Grid Grid.Row="1" Background="{StaticResource DarkBrush}">
-                    <TextBox Background="Transparent" TextAlignment="Left" Foreground="{StaticResource GrayBrush}" TextWrapping="Wrap"
-                             AcceptsTab="True" AcceptsReturn="True" BorderBrush="{x:Null}" BorderThickness="0" HorizontalScrollBarVisibility="Disabled"
-                             FontFamily="{StaticResource JostFont}" FontSize="{StaticResource Small}" Padding="20 20 40 5" CaretBrush="{StaticResource GrayBrush}" />
-                </Grid>
-                
-            </Grid>-->
-            
-            <!--#endregion--> 
-            
         </Grid>
     </Grid>
 </Window>

@@ -5,19 +5,16 @@
     <Compile Update="Controls\SideMenu\MenuButtonControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\ListControlItem.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Controls\PageHost.xaml.cs">
+    <Compile Update="Controls\SideMenu\ListControlItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\SideMenu\MenuButtonParentControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\TabControl.xaml.cs">
+    <Compile Update="Controls\Tabs\TabControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\TabControlContainer.xaml.cs">
+    <Compile Update="Controls\Tabs\TabControlContainer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\BookPage.xaml.cs">
@@ -31,19 +28,16 @@
     <Page Update="Controls\SideMenu\MenuButtonControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\ListControlItem.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Controls\PageHost.xaml">
+    <Page Update="Controls\SideMenu\ListControlItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\SideMenu\MenuButtonParentControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\TabControl.xaml">
+    <Page Update="Controls\Tabs\TabControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\TabControlContainer.xaml">
+    <Page Update="Controls\Tabs\TabControlContainer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\BookPage.xaml">

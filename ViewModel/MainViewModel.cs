@@ -124,20 +124,13 @@ namespace Chronicle
         #region Public Helpers
 
         
-        public void GotoPage(ApplicationPage page, BaseViewModel viewModel = null)
-        {
-            // Set the current page
-            CurrentPageViewModel = viewModel;
-
-            // See if page has changed
-            var different = CurrentPage != page;
-
+        public void GotoPage(ApplicationPage page)
+        {            
             // Sets current page value
             CurrentPage = page;
 
             // If page hasn't changed fire off notification to update page
             // Fire off a currentPage changed event
-            //if(!different)
             OnPropertyChanged(nameof(CurrentPage));
           
         }

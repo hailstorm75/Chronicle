@@ -4,7 +4,7 @@
     <!-- Colors -->
     <Color x:Key="Blue">#8BC3EB</Color>
 
-    <!-- Brushed -->
+    <!-- Brushes -->
     <SolidColorBrush x:Key="LightDarkBrush" Color="#1E1E1E" />
     <SolidColorBrush x:Key="DarkBrush" Color="#171717" />
     <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF" />

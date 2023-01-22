@@ -10,7 +10,7 @@ namespace Chronicle
 
 	public static class ApplicationPageHelpers
 	{
-		public static Page ToBasePage(this ApplicationPage page, object viewModel = null)
+		public static Page ToBasePage(this ApplicationPage page)
 		{
 			// Find the appropriate page
 			switch(page)
@@ -33,7 +33,10 @@ namespace Chronicle
 			if (page is NotePage)
 				return ApplicationPage.Note;
 
-			Debugger.Break();
+            if (page is BookPage)
+                return ApplicationPage.Book;
+
+            Debugger.Break();
 			return default(ApplicationPage);
         }
 

@@ -15,8 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="ViewModel\.Design\TabControlContainerDesignModel.cs" />
-    <Compile Include="ViewModel\.Design\TabControlDesignModel.cs" />
+    <Compile Include="ViewModel\SideMenu\.Design\MenuButtonDesignModel.cs" />
+    <Compile Include="ViewModel\SideMenu\.Design\MenuButtonParentDesignModel.cs" />
+    <Compile Include="ViewModel\Tabs\.Design\TabControlContainerDesignModel.cs" />
+    <Compile Include="ViewModel\Tabs\.Design\TabControlDesignModel.cs" />
     <Compile Include="ViewModel\List\.Design\BooksListControlDesignModel.cs" />
     <Compile Include="ViewModel\List\.Design\ListControlItemDesignModel.cs" />
     <Compile Include="ViewModel\List\.Design\NotesListControlDesignModel.cs" />

@@ -36,17 +36,7 @@ namespace Chronicle
         /// </summary>
         public BooksListControlViewModel()
         {
-            // If note list is empty
-            //if (NoteListItems.Count < 0)
-            //{
-            //    // Notify user
-            //    Message = "Empty";
-            //    IsListEmpty = true;
-
-            //    // Update properties
-            //    OnPropertyChanged(nameof(Message));
-            //    OnPropertyChanged(nameof(IsListEmpty));
-            //}
+            
         }
     }
 }
