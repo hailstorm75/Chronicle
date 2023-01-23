@@ -40,6 +40,18 @@
     <Page Update="Controls\Tabs\TabControlContainer.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\TrashPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SharePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CalendarPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\BookPage.xaml">
       <SubType>Designer</SubType>
     </Page>

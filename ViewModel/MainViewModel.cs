@@ -39,7 +39,7 @@ namespace Chronicle
         /// The current page of this application
         /// default to note
         /// </summary>
-        public ApplicationPage CurrentPage { get; private set; } = ApplicationPage.Note;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Note;
 
         /// <summary>
         /// The view model to use for the current page when the Current page changes

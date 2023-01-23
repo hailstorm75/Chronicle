@@ -14,6 +14,8 @@ namespace Chronicle
     /// </summary>
     public class MenuButtonViewModel : BaseViewModel
     {
+        #region Public Properties
+
         /// <summary>
         /// The icon for each button 
         /// </summary>
@@ -22,12 +24,22 @@ namespace Chronicle
         /// <summary>
         /// The title of each menu button
         /// </summary>
-        public string MenuTitle { get; set; }
+        public string MenuTitle { get; set; } 
+
+        public bool IsSelected { get; set; }
+
+        #endregion
+
+        #region Public Commands
 
         /// <summary>
         /// Command to select menu item
         /// </summary>
         public ICommand MenuCommand { get; set; }
+
+        #endregion
+
+        #region Constructors
 
         /// <summary>
         /// Default constructor
@@ -39,15 +51,21 @@ namespace Chronicle
 
             // Update properties
             OnPropertyChanged(nameof(MenuTitle));
+            OnPropertyChanged(nameof(IsSelected));
         }
+
+        #endregion
+
+        #region Command Methods
 
         /// <summary>
         /// Sort menu item that is selected in the view
         /// </summary>
         private void SelectMenuItem()
         {
+
             // Sort and change view
-            switch(MenuTitle)
+            switch (MenuTitle)
             {
                 case "Note":
                     // TODO: Open and close list items.
@@ -60,8 +78,26 @@ namespace Chronicle
                     // open book file on bookpage when user click on list item
                     MainAppViewModel.GotoPage(ApplicationPage.Book);
                     return;
+
+                case "Calendar":
+                    MainAppViewModel.GotoPage(ApplicationPage.Calendar);
+                    return;
+
+                case "Share":
+                    MainAppViewModel.GotoPage(ApplicationPage.Share);
+                    return;
+
+                case "Settings":
+                    MainAppViewModel.GotoPage(ApplicationPage.Settings);
+                    return;
+
+                case "Trash":
+                    MainAppViewModel.GotoPage(ApplicationPage.Trash);
+                    return;
             }
         }
+
+        #endregion
 
     }
 }

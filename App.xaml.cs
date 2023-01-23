@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using static Chronicle.DI;
 
 namespace Chronicle
 {
@@ -27,12 +28,18 @@ namespace Chronicle
             Current.MainWindow.Show();
         }
 
+        /// <summary>
+        /// Configure this application
+        /// </summary>
         private void ApplicationSetup()
         {
             // Setup the Dna framework
             Framework.Construct<DefaultFrameworkConstruction>()
                  .AddViewModels()
                  .Build();
+
+            // Set note page as initial or default view
+            MainAppViewModel.CurrentPage = ApplicationPage.Note;
         }
     }
 }

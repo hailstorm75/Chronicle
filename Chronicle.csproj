@@ -45,4 +45,19 @@
     <PackageReference Include="Dna.Framework" Version="1.0.7.19" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Pages\TrashPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\SharePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\CalendarPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

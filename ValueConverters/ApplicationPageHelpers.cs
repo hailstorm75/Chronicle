@@ -1,5 +1,4 @@
 ﻿using Chronicle;
-using Chronicle.Pages;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -20,6 +19,18 @@ namespace Chronicle
 
                 case ApplicationPage.Book:
                     return new BookPage { DataContext = new BookPageViewModel() };
+				
+				case ApplicationPage.Calendar:
+                    return new CalendarPage { DataContext = new CalendarPageViewModel() };
+
+                case ApplicationPage.Share:
+                    return new SharePage { DataContext = new SharePageViewModel() };
+
+                case ApplicationPage.Settings:
+                    return new SettingsPage { DataContext = new SettingsPageViewModel() };
+
+                case ApplicationPage.Trash:
+                    return new TrashPage { DataContext = new TrashPageViewModel() };
 
                 default:
 					Debugger.Break();

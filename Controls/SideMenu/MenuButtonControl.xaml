@@ -46,7 +46,7 @@
                                 <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                             </Trigger>
 
-                            <DataTrigger Binding="{Binding IsSelected}" Value="True" >
+                            <DataTrigger Binding="{Binding IsSelectedx}" Value="True" >
                                 <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
                             </DataTrigger>
 
@@ -57,7 +57,7 @@
         </Style>
     </UserControl.Resources>
 
-    <ContentControl Style="{StaticResource MenuButton}" >
+    <ContentControl Style="{StaticResource MenuButton}" local:IsSelectedAttachedProperty.Value="{Binding IsSelected}" >
         <ContentControl.InputBindings>
             <MouseBinding Command="{Binding MenuCommand}" MouseAction="LeftClick" />
         </ContentControl.InputBindings>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Chronicle.Pages
+namespace Chronicle
 {
     /// <summary>
     /// Interaction logic for BookPage.xaml

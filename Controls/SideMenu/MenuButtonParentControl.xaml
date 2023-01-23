@@ -21,7 +21,7 @@
                       HorizontalContentAlignment="Center">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    
+
                     <local:MenuButtonControl />
 
                 </DataTemplate>
