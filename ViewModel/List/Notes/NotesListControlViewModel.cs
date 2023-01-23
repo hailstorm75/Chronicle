@@ -5,6 +5,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
 
@@ -31,12 +32,16 @@ namespace Chronicle
         /// </summary>
         public ObservableCollection<ListControlItemViewModel> NoteListItems { get; set; }
 
+        public Visibility ShowList { get; set; }
+
         /// <summary>
         /// Default constructor
         /// </summary>
         public NotesListControlViewModel()
         {
-            
+            ShowList = Visibility.Collapsed;
+
+            OnPropertyChanged(nameof(ShowList));
         }
     }
 }

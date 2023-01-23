@@ -17,5 +17,12 @@ namespace Chronicle
         /// </summary>
         public static MainViewModel MainAppViewModel => Framework.Service<MainViewModel>();
 
+
+
+        /// <summary>
+        /// Shortcut to access the <see cref="NotesListControlViewModel"/>
+        /// </summary>
+        public static NotesListControlViewModel NotesListViewModel => Framework.Service<NotesListControlViewModel>();
+
     }
 }

@@ -40,7 +40,7 @@ namespace Chronicle
                 new MenuButtonViewModel()
                 {
                     MenuIcon = IconType.Calendar,
-                    MenuTitle = "Calendar"
+                    MenuTitle = "Calendar",
                 },
 
                 new MenuButtonViewModel()

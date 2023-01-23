@@ -19,6 +19,11 @@ namespace Chronicle
         /// </summary>
         public MainViewModel Application => MainAppViewModel;
 
+        /// <summary>
+        /// The main application view model
+        /// </summary>
+        public NotesListControlViewModel NotesList => NotesListViewModel;
+
         #endregion
     }
 }

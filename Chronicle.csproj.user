@@ -5,7 +5,7 @@
     <Compile Update="Controls\SideMenu\MenuButtonControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\SideMenu\ListControlItem.xaml.cs">
+    <Compile Update="Controls\Note_Book_List\ListControlItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\SideMenu\MenuButtonParentControl.xaml.cs">
@@ -28,7 +28,7 @@
     <Page Update="Controls\SideMenu\MenuButtonControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\SideMenu\ListControlItem.xaml">
+    <Page Update="Controls\Note_Book_List\ListControlItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\SideMenu\MenuButtonParentControl.xaml">

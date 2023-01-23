@@ -46,10 +46,6 @@
                                 <Setter Property="Background" Value="{StaticResource LightDarkBrush}" />
                             </Trigger>
 
-                            <DataTrigger Binding="{Binding IsSelectedx}" Value="True" >
-                                <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
-                            </DataTrigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -57,10 +53,18 @@
         </Style>
     </UserControl.Resources>
 
-    <ContentControl Style="{StaticResource MenuButton}" local:IsSelectedAttachedProperty.Value="{Binding IsSelected}" >
-        <ContentControl.InputBindings>
-            <MouseBinding Command="{Binding MenuCommand}" MouseAction="LeftClick" />
-        </ContentControl.InputBindings>
-    </ContentControl>
+    <StackPanel Orientation="Vertical">
+        <ContentControl Style="{StaticResource MenuButton}" >
+            <ContentControl.InputBindings>
+                <MouseBinding Command="{Binding MenuCommand}" MouseAction="LeftClick" />
+            </ContentControl.InputBindings>
+        </ContentControl>
+
+        <!--<local:NotesListControl x:Name="NotesList"
+                                Visibility="{Binding NotesList.ShowList, Source={x:Static local:ViewModelLocator.Instance}}" />-->
+
+        <!--<local:BooksListControl x:Name="BooksList" Visibility="{Binding ShowBooksList, Converter={local:BooleanToVisibilityConverter}}" />-->
+
+    </StackPanel>
     
 </UserControl>

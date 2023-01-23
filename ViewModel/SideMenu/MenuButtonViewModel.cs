@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using static Chronicle.DI;
@@ -26,7 +27,12 @@ namespace Chronicle
         /// </summary>
         public string MenuTitle { get; set; } 
 
-        public bool IsSelected { get; set; }
+        /// <summary>
+        /// Secondary content of some menu item 
+        /// </summary>
+        public IconType SecondaryContent { get; set; }
+
+        public NotesListControlViewModel Notes { get; set; }
 
         #endregion
 
@@ -49,9 +55,13 @@ namespace Chronicle
             // Create commands
             MenuCommand = new RelayCommand(SelectMenuItem);
 
+            // Initialize properties
+            Notes = new NotesListControlViewModel();
+
             // Update properties
             OnPropertyChanged(nameof(MenuTitle));
-            OnPropertyChanged(nameof(IsSelected));
+            OnPropertyChanged(nameof(Notes));
+           
         }
 
         #endregion
@@ -70,6 +80,7 @@ namespace Chronicle
                 case "Note":
                     // TODO: Open and close list items.
                     // open note file on notepage when user click on list item
+                    //SecondaryContent = IconType.NotesItem;
                     MainAppViewModel.GotoPage(ApplicationPage.Note);
                     return;
 
