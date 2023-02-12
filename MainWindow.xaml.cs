@@ -20,12 +20,32 @@ namespace Chronicle
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public MainWindow()
         {
+            // Initailize 
             InitializeComponent();
             
+            // Data context
             DataContext = new MainViewModel();
-           
+
+            // Listen for window size changing
+            this.SizeChanged += MainWindow_SizeChanged;
+                
         }
+
+        /// <summary>
+        /// Update side menu size whenever size of the window changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainWindow_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            // Update side menu height
+            SideMenu.Height = this.ActualHeight - AppTitle.ActualHeight;
+        }
+
     }
 }

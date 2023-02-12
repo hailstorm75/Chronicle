@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using static Chronicle.DI;
+
 
 namespace Chronicle
 {
@@ -14,6 +16,8 @@ namespace Chronicle
     /// </summary>
     public class MenuButtonParentViewModel : BaseViewModel
     {
+        #region Public Properties
+
         /// <summary>
         /// Menu items aligned at the top
         /// </summary>
@@ -24,5 +28,9 @@ namespace Chronicle
         /// </summary>
         public ObservableCollection<MenuButtonViewModel> BottomMenuItems { get; set; }
 
+
+        #endregion
+
+       
     }
 }

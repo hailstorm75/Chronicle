@@ -28,15 +28,15 @@ namespace Chronicle
 
 
 
-        public bool ShowNotesList
+        public Visibility ShowNotesList
         {
-            get { return (bool)GetValue(ShowNotesListProperty); }
+            get { return (Visibility)GetValue(ShowNotesListProperty); }
             set { SetValue(ShowNotesListProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for ShowNotesList.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ShowNotesListProperty =
-            DependencyProperty.Register("ShowNotesList", typeof(bool), typeof(NotesListControl));
+            DependencyProperty.Register("ShowNotesList", typeof(Visibility), typeof(NotesListControl));
 
 
     }

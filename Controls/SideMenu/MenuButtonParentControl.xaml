@@ -9,11 +9,12 @@
 
     <Grid DataContext="{x:Static local:MenuButtonParentDesignModel.Instance}"
           Background="{StaticResource DarkBrush}">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
         </Grid.RowDefinitions>
 
         <ItemsControl ItemsSource="{Binding TopMenuItems}" Grid.Row="0"
@@ -26,7 +27,29 @@
                         
                         <local:MenuButtonControl />
 
-                        <local:NotesListControl ShowNotesList="True" />
+                        <ItemsControl ItemsSource="{Binding NotesSubMenu}" Grid.Row="0"
+                                      VerticalContentAlignment="Top"
+                                      HorizontalContentAlignment="Center">      
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+
+                                    <local:NotesListControl ShowNotesList="{Binding MenuButton.OpenNotesList, UpdateSourceTrigger=PropertyChanged,
+                                            Source={x:Static local:ViewModelLocator.Instance}, Converter={local:BooleanToVisibilityConverter}}" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <ItemsControl ItemsSource="{Binding BooksSubMenu}" Grid.Row="0"
+                                      VerticalContentAlignment="Top"
+                                      HorizontalContentAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+
+                                    <local:BooksListControl ShowBooksList="{Binding OpenBooksList}" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                      
 
                     </StackPanel>
 
@@ -34,7 +57,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
-        <Border Grid.Row="1"  />
+        <Border Grid.Row="1" />
 
         <ItemsControl ItemsSource="{Binding BottomMenuItems}" Grid.Row="2"
                       VerticalContentAlignment="Bottom"
@@ -48,7 +71,7 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
-        <Border Grid.Row="3" Height="50" />
+        <Border Grid.Row="3" />
 
     </Grid>
 

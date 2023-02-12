@@ -26,12 +26,21 @@ namespace Chronicle
         /// <summary>
         /// The title of each menu button
         /// </summary>
-        public string MenuTitle { get; set; } 
+        public string MenuTitle { get; set; }
+
+        public bool OpenNotesList { get; set; }
 
         /// <summary>
-        /// The submenu of this menu
+        /// The submenu of this menu 
+        /// of type NOTES
         /// </summary>
-        public ObservableCollection<NotesListControlViewModel> SubMenu { get; set; }
+        public ObservableCollection<NotesListControlViewModel> NotesSubMenu { get; set; }
+
+        /// <summary>
+        /// Submenu of this menu
+        /// of type BOOKS
+        /// </summary>
+        public ObservableCollection<BooksListControlViewModel> BooksSubMenu { get; set; }
 
         #endregion
 
@@ -56,7 +65,7 @@ namespace Chronicle
 
             // Update properties
             OnPropertyChanged(nameof(MenuTitle));
-           
+            OnPropertyChanged(nameof(OpenNotesList));
         }
 
         #endregion
@@ -75,8 +84,12 @@ namespace Chronicle
                 case "Note":
                     // TODO: Open and close list items.
                     // open note file on notepage when user click on list item
-                    //SecondaryContent = IconType.NotesItem;
                     MainAppViewModel.GotoPage(ApplicationPage.Note);
+                    if(OpenNotesList == true)
+                        OpenNotesList = false;
+                    else
+                        OpenNotesList = true;
+                    OnPropertyChanged(nameof(OpenNotesList));
                     return;
 
                 case "Book":

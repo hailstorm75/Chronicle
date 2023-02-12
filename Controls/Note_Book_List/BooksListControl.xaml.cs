@@ -24,5 +24,15 @@ namespace Chronicle
         {
             InitializeComponent();
         }
+
+        public bool ShowBooksList
+        {
+            get { return (bool)GetValue(ShowBooksListProperty); }
+            set { SetValue(ShowBooksListProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ShowBooksList.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ShowBooksListProperty =
+            DependencyProperty.Register("ShowBooksList", typeof(bool), typeof(BooksListControl));
     }
 }

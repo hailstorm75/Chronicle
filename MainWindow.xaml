@@ -43,7 +43,8 @@
                 </Grid.RowDefinitions>
 
                 <!-- App title -->
-                <Grid Grid.Row="0">
+                <Grid Grid.Row="0"
+                      x:Name="AppTitle">
                     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                Foreground="{StaticResource WhiteBrush}" Margin="-20, 5, 5, 5">
                         <TextBlock.Effect>
@@ -53,9 +54,10 @@
                         <Run Text=" Chronicle" FontFamily="{StaticResource JostFont}" FontSize="{StaticResource XLarge}" />
                     </TextBlock>
                 </Grid>
-
+                
                 <!-- Side menu --> <!-- update height value -->
-                <Grid Grid.Row="1" Height="{Binding ActualHeight, ElementName=Main}">
+                <Grid Grid.Row="1" 
+                      x:Name="SideMenu">
                     <local:MenuButtonParentControl  />
                 </Grid>
 

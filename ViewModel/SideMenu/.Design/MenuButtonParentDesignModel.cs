@@ -29,12 +29,100 @@ namespace Chronicle
                 {
                     MenuIcon = IconType.Note,
                     MenuTitle = "Note",
+                    NotesSubMenu = new ObservableCollection<NotesListControlViewModel>
+                    {
+                        new NotesListControlViewModel()
+                        {
+                            NoteListItems = new ObservableCollection<ListControlItemViewModel>
+                            {
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Walk the dog after work.",
+                                    Icon = IconType.NotesItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Grocery list.",
+                                    Icon = IconType.NotesItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Tasks to complete at work.",
+                                    Icon = IconType.NotesItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Meeting at 10am with CEO.",
+                                    Icon = IconType.NotesItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "This year meditation session times.",
+                                    Icon = IconType.NotesItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Gym membership code.",
+                                    Icon = IconType.NotesItem
+                                },
+                            }
+                        }
+                    }
                 },
 
                 new MenuButtonViewModel()
                 {
                     MenuIcon = IconType.Book,
                     MenuTitle = "Book",
+                    BooksSubMenu = new ObservableCollection<BooksListControlViewModel>
+                    {
+                        new BooksListControlViewModel()
+                        {
+                            BookListItems = new ObservableCollection<ListControlItemViewModel>
+                            {
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Microcontroller 101.",
+                                    Icon = IconType.BooksItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Healthy Life Style.",
+                                    Icon = IconType.BooksItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Embedded System Architecture.",
+                                    Icon = IconType.BooksItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Computer Architecture.",
+                                    Icon = IconType.BooksItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Illusion Of Time.",
+                                    Icon = IconType.BooksItem
+                                },
+
+                                new ListControlItemViewModel
+                                {
+                                    FileName = "Cosmic tales.",
+                                    Icon = IconType.BooksItem
+                                },
+                            }
+                        }
+                    }
                 },
 
                 new MenuButtonViewModel()
