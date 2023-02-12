@@ -21,8 +21,14 @@
                       HorizontalContentAlignment="Center">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
+                    <StackPanel Orientation="Vertical"
+                                HorizontalAlignment="Stretch">
+                        
+                        <local:MenuButtonControl />
 
-                    <local:MenuButtonControl />
+                        <local:NotesListControl ShowNotesList="True" />
+
+                    </StackPanel>
 
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

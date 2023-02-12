@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,9 @@ namespace Chronicle
         public string MenuTitle { get; set; } 
 
         /// <summary>
-        /// Secondary content of some menu item 
+        /// The submenu of this menu
         /// </summary>
-        public IconType SecondaryContent { get; set; }
-
-        public NotesListControlViewModel Notes { get; set; }
+        public ObservableCollection<NotesListControlViewModel> SubMenu { get; set; }
 
         #endregion
 
@@ -55,12 +54,8 @@ namespace Chronicle
             // Create commands
             MenuCommand = new RelayCommand(SelectMenuItem);
 
-            // Initialize properties
-            Notes = new NotesListControlViewModel();
-
             // Update properties
             OnPropertyChanged(nameof(MenuTitle));
-            OnPropertyChanged(nameof(Notes));
            
         }
 

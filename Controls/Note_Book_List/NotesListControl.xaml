@@ -6,7 +6,19 @@
              xmlns:local="clr-namespace:Chronicle"
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="270"
-             DataContext="{x:Static local:NotesListControlDesignModel.Instance}">
+             x:Name="Notes"
+             DataContext="{x:Static local:NotesListControlDesignModel.Instance}" >
+
+    
+    <UserControl.Style>
+        <Style TargetType="{x:Type UserControl}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ShowNotesList, ElementName=Notes, TargetNullValue=False, FallbackValue=False}" Value="False">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Style>
 
     <Border Background="{StaticResource DarkBrush}"
             BorderThickness="0" ClipToBounds="True">
@@ -18,7 +30,7 @@
             </Border.Effect>
 
             <Grid >
-                
+
                 <!--#region to be implemented with different app colors-->
                
                 <!--<Grid.RowDefinitions>
@@ -53,7 +65,7 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </ScrollViewer>
-                
+
             </Grid>
 
         </Border>

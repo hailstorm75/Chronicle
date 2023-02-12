@@ -28,13 +28,13 @@ namespace Chronicle
                 new MenuButtonViewModel()
                 {
                     MenuIcon = IconType.Note,
-                    MenuTitle = "Note"
+                    MenuTitle = "Note",
                 },
 
                 new MenuButtonViewModel()
                 {
                     MenuIcon = IconType.Book,
-                    MenuTitle = "Book"
+                    MenuTitle = "Book",
                 },
 
                 new MenuButtonViewModel()
