@@ -45,7 +45,7 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
 
-                                    <local:BooksListControl ShowBooksList="{Binding OpenBooksList}" />
+                                    <local:BooksListControl ShowBooksList="True" />
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

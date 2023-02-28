@@ -7,11 +7,10 @@
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="270"
              x:Name="Notes"
-             Visibility="{Binding ShowNotesList}"
              d:DataContext="{x:Static local:NotesListControlDesignModel.Instance}" >
 
     
-    <!--<UserControl.Style>
+    <UserControl.Style>
         <Style TargetType="{x:Type UserControl}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding ShowNotesList, ElementName=Notes, TargetNullValue=False, FallbackValue=False}" Value="False">
@@ -19,7 +18,7 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-    </UserControl.Style>-->
+    </UserControl.Style>
 
     <Border Background="{StaticResource DarkBrush}"
             BorderThickness="0" ClipToBounds="True">
